@@ -1,0 +1,21 @@
+Package: penguinExplorer
+Title: Penguin Species Explorer
+Version: 0.0.0.9000
+Authors@R: 
+    person("Kai-Hong", "Su", , "ksuu0011@student.monash.edu", role = c("aut", "cre"))
+Description: An interactive tool for exploring penguin body measurements
+    across species and islands.
+License: MIT + file LICENSE
+Config/roxygen2/version: 8.1.1
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+Depends: 
+    R (>= 3.5)
+LazyData: true
+Imports: 
+    dplyr,
+    shiny
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr

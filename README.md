@@ -1,0 +1,64 @@
+
+# penguinExplorer
+
+penguinExplorer is an R package that provides an interactive Shiny app for exploring penguin body measurements across species and islands.
+
+## Purpose
+
+The app is designed for biology students and beginners interested in exploring differences in penguin body measurements.
+
+The main question is:
+
+**How do penguin body measurements differ across species and islands?**
+
+Users can select penguin species, islands, and body measurements to explore patterns through a scatter plot, summary table, and dynamic findings.
+
+## Data
+
+The package uses data from the `palmerpenguins` R package.
+
+The original dataset contains 344 penguins from three species: Adelie, Chinstrap, and Gentoo.
+
+The cleaned dataset contains 342 observations and six variables. Observations with missing body mass, flipper length, or bill length were removed.
+
+Data source: https://allisonhorst.github.io/palmerpenguins/
+
+The original dataset is available under the CC0 licence.
+
+## Installation
+
+Install the package from GitHub:
+
+```r
+install.packages("remotes")
+
+remotes::install_github(
+  "ETC5523-2026/etc5523-assignment-4-ksue0611"
+)
+```
+
+## Launch the App
+
+```r
+library(penguinExplorer)
+
+run_app()
+```
+
+## How to Use
+
+1. Select one or more penguin species.
+2. Choose the islands to explore.
+3. Select measurements for the X-axis and Y-axis.
+4. Examine the scatter plot and summary table.
+5. Read the key finding based on the selected data.
+
+The app describes patterns in the observed data and does not establish causal relationships.
+
+## Documentation Website
+
+The pkgdown website link will be added after publication.
+
+## Generative AI Declaration
+
+I used ChatGPT to assist with planning the app structure, drafting and reviewing R code, debugging, improving the interface, and preparing documentation. I reviewed and tested the code and outputs.

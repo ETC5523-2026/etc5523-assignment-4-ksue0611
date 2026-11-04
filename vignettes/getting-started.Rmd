@@ -1,0 +1,95 @@
+
+---
+title: "Getting Started with penguinExplorer"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Getting Started with penguinExplorer}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+## Introduction
+
+The `penguinExplorer` package provides an interactive Shiny app for exploring penguin body measurements.
+
+The app is designed for biology students and beginners who want to investigate the following question:
+
+**How do penguin body measurements differ across species and islands?**
+
+## Data
+
+The package contains a cleaned version of the Palmer Penguins dataset.
+
+The original data contains 344 observations. After removing observations with missing body mass, flipper length or bill length, the cleaned dataset contains 342 observations and six variables.
+
+The three penguin species are Adelie, Chinstrap and Gentoo. The observations come from Biscoe, Dream and Torgersen islands.
+
+Source: https://allisonhorst.github.io/palmerpenguins/
+
+## Installation
+
+Install the package from GitHub:
+
+```{r eval=FALSE}
+install.packages("remotes")
+
+remotes::install_github(
+  "ETC5523-2026/etc5523-assignment-4-ksue0611"
+)
+```
+
+## Launch the Shiny App
+
+Load the package and launch the app:
+
+```{r eval=FALSE}
+library(penguinExplorer)
+
+run_app()
+```
+
+The app opens an interactive interface for exploring the data.
+
+## How to Use
+
+1. Select one or more penguin species using the Species filter.
+2. Select the islands you want to investigate.
+3. Choose body measurements for the X-axis and Y-axis.
+4. Explore the patterns displayed in the scatter plot.
+5. Compare the number of observations and average measurements in the summary table.
+6. Read the Key Finding, which updates based on the selected data.
+
+## Understanding the Outputs
+
+Each point in the scatter plot represents one penguin. The colours distinguish Adelie, Chinstrap and Gentoo penguins.
+
+The X-axis and Y-axis represent the measurements selected by the user.
+
+The summary table displays the number of observations, mean body mass in grams and mean flipper length in millimetres for each selected species.
+
+For example, when all species and islands are selected, Gentoo penguins have the highest average body mass, approximately 5076 g.
+
+The Key Finding updates when the selected species or islands change.
+
+## Example: Using the Summary Function
+
+The package also includes the exported `summarise_penguins()` function.
+
+```{r eval=FALSE}
+library(penguinExplorer)
+
+summarise_penguins(
+  penguins_clean,
+  c("Adelie", "Gentoo")
+)
+```
+
+This function returns the number of observations, mean body mass and mean flipper length for the selected species.
+
+## Limitations
+
+The dataset only includes penguins observed near Palmer Station, Antarctica, and is not representative of all penguin populations.
+
+Species are not equally represented across islands, so differences between islands may also reflect differences in species composition.
+
+The app provides descriptive comparisons and does not establish causal relationships.
