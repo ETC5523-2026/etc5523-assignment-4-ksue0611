@@ -57,7 +57,9 @@ The app describes patterns in the observed data and does not establish causal re
 
 ## Documentation Website
 
-The pkgdown website link will be added after publication.
+The package documentation is available at:
+
+https://etc5523-2026.github.io/etc5523-assignment-4-ksue0611/
 
 ## Generative AI Declaration
 
